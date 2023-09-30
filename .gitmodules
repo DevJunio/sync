@@ -2,3 +2,7 @@
 	path = private
 	url = git@github.com:DevJunio/private.git
 	branch = main
+[submodule "notes"]
+	path = notes
+	url = git@github.com:DevJunio/notes.git
+	branch = main
