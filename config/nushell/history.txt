@@ -1,0 +1,336 @@
+clear
+cd
+clear
+cal 
+z
+zoxide
+zoxide init
+zoxide init --help
+zoxide init nu
+zoxide
+zoxide query
+zoxide query things
+zoxide things
+z 
+z
+zoxide --cmd
+zoxide 
+zoxide init
+zoxide init --help
+zoxide init --cmd
+zoxide init --cmd --help
+zoxide init --cmd z
+zoxide init --cmd z nu
+zoxide init --cmd z nushell
+nvim .config/nushell/config.nu
+zoxide init --cmd z nushell | expand
+clear
+zoxide init --cmd z nushell | source
+$env.config
+$env
+$config
+$env.VISUAL
+$nu.config
+$nu.config-path
+$nu.env-path
+nvim .config/nushell/env.nu
+module use {$(zoxide init nushell)}
+module use $(zoxide init nushell)
+let file = zoxide init nushell; source file
+let file = zoxide init nushell; source $file
+let file = zoxide init nushell && source $file
+let file = zoxide init nushell and source $file
+let file = zoxide init nushell and source file
+let file = zoxide init nushell; and source file
+let file = zoxide init nushell; and source $file
+let file = zoxide init nushell and source $file
+let file = zoxide init nushell; and source $file
+let file = zoxide init nushell | source $file
+const file = zoxide init nushell; source $file
+const file = $(zoxide init nushell); source $file
+const file = $'zoxide init nushell'; source $file
+const $'zoxide init nushell'; source $file
+const file = (zoxide init nushell); source $file
+const file = $"zoxide init nushell"; source $file
+$"zoxide init nushell"; source $file
+$"zoxide init nushell"| source
+nvim .config/nushell/config.nu
+nushell
+nvim .config/nushell/config.nu
+nushell
+nvim .config/nushell/config.nu
+clear
+z
+zi
+nvim .config/nushell/config.nu
+n8u
+zi
+z
+clear
+nvim .config/nushell/config.nu
+clear
+z /home/juneo/dev/full-web-app
+zi
+zoxide init --cmd cd nushell
+nvim .config/nushell/config.nu
+z
+zi
+clear
+nvim
+nu8
+clear
+nvim .config/nushell/config.nu
+nvim ~/.config/nushell/config.nu
+$env.SSH_AGENT_PID
+$env.SSH_AUTH_SOCK
+clear
+cargo search shells
+> cargo search shells --limit 10 | lines | parse "{crate_name} = {version} #{description}" | str trim<\n>
+cargo search shells --limit 10 | lines | parse "{crate_name} = {version} #{description}" | str trim<\n>
+ps | where cpu > 0 | sort-by cpu | reverse
+(http get https://api.chucknorris.io/jokes/random).value
+clear
+cargo search shells --limit 10 | lines | parse "{crate_name} = {version} #{description}" | str trim<\n>
+time cargo search shells --limit 10 | lines | parse "{crate_name} = {version} #{description}" | str trim<\n>
+profile cargo search shells --limit 10 | lines | parse "{crate_name} = {version} #{description}" | str trim<\n>
+time (cargo search shells --limit 10 | lines | parse "{crate_name} = {version} #{description}" | str trim)<\n>
+time (cargo search shells)<\n>
+date (cargo search shells)<\n>
+benchmark (cargo search shells --limit 10 | lines | parse "{crate_name} = {version} #{description}" | str trim)<\n>
+benchmark cargo search shells --limit 10 | lines | parse "{crate_name} = {version} #{description}" | str trim
+timeit cargo search shells --limit 10 | lines | parse "{crate_name} = {version} #{description}" | str trim
+timeit cargo search shells 
+benchmark nu
+clear
+nvim
+config nu
+clear
+ls
+exa
+exa --icons
+exa --icons | table
+zi
+nu
+nu
+zi 
+clear
+keybindings list -m
+keybindings list
+keybindings list | get menu
+keybindings list | get 'menu'
+keybindings list | rg 
+keybindings list | rg 'menu'
+keybindings list | rg menu
+keybindings list | rg Menu
+keybindings list | rg Completion
+keybindings list | rg complet
+rg --help
+rg --help | rg 'case'
+keybindings list | rg -pi complet
+cat (keybindings list)
+keybindings list | print
+keybindings list | print 110
+keybindings list | print -l 110
+print --help
+print keybindings list
+keybindings list | print -l 110
+keybindings list
+keybindings list | find history
+keybindings list | rg -pi history
+keybindings list | rg -pi history | split
+keybindings list | rg -pi history | split row
+keybindings list | rg -pi history | split row "\w"
+keybindings list | rg -pi history | split row "\w "
+keybindings list | rg -pi history | split row "|"
+keybindings list | rg -pi history | split row "\n"
+keybindings list | rg -pi history | find \w | split row "\n"
+clear
+keybindings list | rg -pi history | parse '\w' | split row "\n"
+keybindings list | rg -pi history | parse '\w'
+keybindings list | rg -pi history | lines | parse '\w'
+keybindings list | rg -pi history |  parse '(\w+)'
+keybindings list | rg -pi history |  parse '\s(\w+)\s'
+keybindings list | rg -pi history |  parse '(\w+)\s'
+keybindings list | rg -pi history |  parse '(\w)+'
+keybindings list | rg -pi history |  parse 'his'
+keybindings list | rg -pi history 
+keybindings list | rg -pi history |  parse 
+keybindings list | rg -pi history |  parse '\s(\w+)'
+keybindings list | rg -pi history |  parse -r '\s(\w+)'
+keybindings list | rg -pi history |  parse -r '(\w+)'
+keybindings list | rg -pi history |  parse -r '\s(\w+)'
+keybindings list | rg -pi history |  parse -r '\s(\w)'
+keybindings list | rg -pi history |  parse -r '\s'
+keybindings list | rg -pi history |  parse -r '\s\w'
+keybindings list | rg -pi history |  parse -r '\w'
+keybindings list | rg -pi history |  parse -r '\|(\'
+keybindings list | rg -pi history |  parse -r '\|(\w+)'
+config nu
+btm
+nu --threads
+clear
+btm
+paru -R brave
+paru --help
+paru --help | find "shell"
+paru -c 
+paru --complete
+paru --complete 
+paru -P --complete 
+paru -P 
+paru -P brave
+paru -P brav
+paru -P brave-browser
+paru --help
+paru -Rx brave
+paru -R brave-brower
+nvim .config/nushell/config.nu
+clear
+paru -R brave-bin
+cle
+clear
+paru -S microsoft-edge-beta-bin
+du
+dust
+cargo install dust
+cargo install du-dust
+dust
+dust -h
+dust -si
+rm Downloads/*
+rm -rf Downloads/*
+fdisk
+fdisk 
+fdisk --help
+fdisk -l
+sudo fdisk -l
+clear
+dust -h
+dust -H --skip-total
+rm .cache/yay/
+rm .cache/yay/ -rf
+sudo rm .cache/yay/ -rf
+dust -H --skip-total
+dust --skip-total -H 
+dust -H 
+paru -S microsoft-edge-beta-bin
+btm
+top
+clear
+htop
+cd ~/dev
+git clone git@github.com:caio-emidio/mqttTransmission.git
+cd mqttTransmission/
+cargo init --bin mqtt-transmission
+ls
+mv mqtt-transmission/* .
+ls
+rm mqtt-transmission/
+clear
+ls
+v Cargo.toml
+nvim Cargo.toml
+nvim
+nvim src/main.rs
+cargo update
+nvim src/main.rs
+cargo update
+nvim
+cargo update
+clea
+clear
+clearls
+ls
+nvim src/main.rs
+cargo run
+nvim src/main.rs
+cargo run
+clear
+git commit -m "feat: setup rust structure and dependencies"
+git add .
+git commit -m "feat: setup rust structure and dependencies"
+git push
+..
+clear
+ls
+nvim
+~/.local/bin/hibernate.sh
+nvim ~/.config/i3/config
+paru visual-studio
+rm ~/.cache/paru/clone/* -rf
+clear
+paru visual-studio
+snap
+snap install vscode
+sudo snap install vscode
+sudo snap install vscode --candidate
+sudo snap install ==candidate vscode
+sudo snap install --candidate vscode
+sudo snap install --beta vscode
+sudo snap install --edge vscode
+sudo snap install code --classic
+paru
+~/.local/bin/keyboard.sh
+clear
+print ./Cargo.toml
+cat ./Cargo.toml
+docker run --rm --name pg -p 5432:5432 \<\n>   -e POSTGRES_PASSWORD=admin \<\n>   postgres:15
+nvim ~/.config/nushell/config.nu
+cargo test
+nvim .cargo/config.toml
+cargo test
+~/.local/bin/disable-redshift.sh
+clear
+docker run --rm --name pg -p 5432:5432 -e POSTGRES_PASSWORD=admin postgres:15
+clear
+cd .config/
+ls
+unlink emacs/
+mv emacs emacs~1
+mkdir emacs
+ls ..
+touch emacs/init.el
+touch emacs/early-init.el
+cp emacs~1/early-init.el ./emacs/early-init.el
+nvim emacs/early-init.el
+cd 
+cd /opt/
+git clone -b emacs-29 git@github.com:emacs-mirror/emacs.git
+cd 
+ls .local/
+ls .local/apps/
+clear
+mkdir apps
+cd apps
+git clone -b emacs-29 git@github.com:emacs-mirror/emacs.git emacs
+git clone -b emacs-29 git@github.com:emacs-mirror/emacs.git emacs --depth 1
+cd emacs/
+ls
+nvim README
+./autogen.sh
+./configure
+paru libgtk
+paru gtk
+cat ./configure
+nvim configure
+head configure
+head configure --lines 50
+nvim configure
+./configure --with-all
+./configure --with-x-toolkit=gtk3 --with-all
+make
+sudo make install
+emacsclient -c
+emacs
+emacs --debug-init
+dust
+dunst
+clear
+dust
+chsh -s /bin/fish
+cl4ear
+clear
+cargo install --locked --features clipboard broot
+clear
+br -h
+br

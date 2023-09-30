@@ -1,0 +1,23 @@
+# JetBrains
+.idea/
+
+# env files
+.env.*
+.env.local.*
+!.env.example
+!.env.local.example
+
+# NodeJS
+node_modules/
+
+#Rust
+.cargo/
+.target/
+.vscode
+
+.project-notes*
+
+# Emacs litter
+config.el
+*~
+*#*

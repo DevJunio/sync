@@ -1,0 +1,225 @@
+"" Type :actionlist <ActionName> for the list of actions available
+"" SETTINGS
+""
+let mapleader=" "
+
+"" Plugins ---------------------------------
+let g:WhichKey_ShowVimActions = "true"
+set which-key
+set surround
+set commentary
+set exchange
+set highlightedyank
+set vim-paragraph-motion
+set matchit
+set multiple-cursor
+set NERDTree
+set argtextobj
+set textobj-entire
+set textobj-indent
+set easymotion
+set quickscope
+
+"" Plugins Settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+let g:highlightedyank_highlight_duration = "100"
+
+""" NERDTree
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeShowHidden=1
+let g:NERDTreeMinimalUI=1
+
+nnoremap <C-e> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeFind<CR>
+
+"" Common Settings
+set scrolloff=4
+set updatetime=100
+set undolevels=8000
+set history=8000
+
+set signcolumn
+set visualbell
+set incsearch
+set hlsearch
+set ignorecase
+set showmode
+set showcmd
+set viminfo
+
+set clipboard+=ideaput
+set clipboard+=unnamedplus
+
+""" Jetbrains Settings
+set ideajoin
+set idearefactormode=keep
+set idearefactormode=visual
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+"" KEYMAPS
+""" Config files
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+noremap p P
+noremap P p
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+nnoremap fd :wa<CR>
+
+"" Escape
+nnoremap <C-c> <Esc>
+inoremap jk <Esc>
+
+nnoremap \h :actionlist
+
+nnoremap 0 _
+nnoremap - $
+nnoremap _ 0
+
+nnoremap <Leader>e :action ShowErrorDescription<CR>
+nnoremap <Leader>d :action QuickJavaDoc<CR>
+nnoremap K :action QuickJavaDoc<CR>
+nnoremap <Leader>i :action QuickImplementations<CR>
+
+sethandler <C-l> a:ide
+" Use C-l to accept Copilot suggestions
+
+""" Distraction Free Mode
+nnoremap <c-z> :action ToggleZenMode<CR>
+
+""" Terminal
+nnoremap <A-s> :action ShowSettings<CR>
+nnoremap <F2> :action RenameFile<CR>
+
+" Navigation
+nnoremap sv :action SplitVertically<CR>
+nnoremap s- :action SplitHorizontally<CR>
+nnoremap su :action Unsplit<CR>
+" Editor navigation
+nnoremap sl <C-w>l
+nnoremap sk <C-w>k
+nnoremap sj <C-w>j
+nnoremap sh <C-w>k
+
+nnoremap <C-m> :action MoveEditorToOppositeTabGroup<CR>
+
+nnoremap <C-S-l> :action StretchSplitToRight<CR>
+nnoremap <C-S-h> :action StretchSplitToLeft<CR>
+nnoremap <C-S-k> :action StretchSplitToTop<CR>
+nnoremap <C-S-j> :action StretchSplitToBottom<CR>
+
+nnoremap sd :action CloseContent<CR>
+nnoremap sc :action CloseContent<CR>
+nnoremap so :action CloseAllEditorsButActive<CR>
+nnoremap si <C-S-6>
+
+nnoremap sp :action NextTab<CR>
+nnoremap sn :action PreviousTab<CR>
+
+sethandler <C-p> a:vim
+
+nnoremap ;ba :action ToggleBookmark<CR>
+nnoremap ;bp :action GotoPreviousBookmark<CR>
+nnoremap ;bn :action GotoNextBookmark<CR>
+nnoremap ;bm :action ToggleBookmarkWithMnemonic<CR>
+nnoremap ;bst :action ShowTypeBookmarks<CR>
+
+"" Add fold to a non-folded line
+vnoremap < <gv
+vnoremap > >gv
+
+"" Move lines on visual mode
+vnoremap J :action MoveLineDown<CR>
+vnoremap K :action MoveLineUp<CR>
+
+nnoremap [[ :action MethodUp<CR>
+vnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
+vnoremap ]] :action MethodDown<CR>
+
+nnoremap gr :action RenameElement<CR>
+nnoremap gR :action RenameFile<CR>
+
+"" Comments
+vnoremap <C-/> :action CommentByBlockComment<CR>
+vnoremap <A-;> :action CommentByBlockComment<CR>
+
+"" Keymap to use when no window is selected
+nnoremap <C-f> :action GotoFile<CR>
+
+nnoremap fr :action RecentFiles<CR>
+nnoremap ff :action GotoFile<CR>
+nnoremap ft :action GotoClass<CR>
+nnoremap fs :action GotoSymbol<CR>
+
+nnoremap <A-a> :action GotoAction<CR>
+
+nnoremap <Leader>l :action RecentLocations<CR>
+nnoremap <leader>u :action LocalHistory.ShowHistory<CR>
+
+map gn :action GotoNextError<CR>
+map gp :action GotoPreviousError<CR>
+
+""" Searching and Source Code Navigation
+nnoremap <Leader>pv :action ActivateProjectToolWindow<CR>
+nnoremap <Leader>ch :action CallHierarchy<CR>
+nnoremap <Leader>sk :action ShowNavBar<CR>
+nnoremap <Leader>s :action FileStructurePopup<CR>
+
+"" `g` commands
+" e.g Code actions
+nnoremap ga :action ShowIntentionActions<CR>
+nnoremap gu :action FindUsages<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap ge :action ShowErrorDescription<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gp :action GotToSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+
+nnoremap <C-,> :action ShowPopupMenu<CR>
+
+k"" Tool windows
+nnoremap <A-x> :action HideAllWindows<CR>
+
+""" Running and Debugging
+nnoremap ,r :action Run<CR>
+nnoremap ,c :action RunClass<CR>
+nnoremap ,f :action ChooseRunConfiguration<CR>
+nnoremap ,t :action ActivateRunToolWindow<CR>
+nnoremap ,u :action Rerun<CR>
+nnoremap ,f :action RerunFailedTests<CR>
+nnoremap ,b :action ToggleLineBreakpoint<CR>
+nnoremap ,d :action ContextDebug<CR>
+nnoremap ,n :action ActivateDebugToolWindow<CR>
+
+noremap ;t :action PinActiveEditorTab<CR>
+
+nnoremap zC :action CollapseAllRegions<CR>
+nnoremap zo :action ExpandRegion<CR>
+nnoremap zO :action ExpandAllRegions<CR>
+vnoremap zf :action CollapseSelection<CR>
+nnoremap <tab> :action ExpandCollapseToggleAction<CR>
+nnoremap <S-tab> :action CollapseAllRegions<CR>
+nnoremap gs :action SurroundWith<CR>
+
+let g:qs_highlight_on_keys = ['F', 'f', 'T', 't']
+let g:multi_cursor_start_word_key      = '<C-n>'
+let g:multi_cursor_select_all_word_key = '<A-n>'
+let g:multi_cursor_start_key           = 'g<C-n>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-n>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+
+"" Disable some default mappings
+sethandler <F1> a:vim
+sethandler <C-k> a:vim
+
+nnoremap ;r :action ExternalSystem.ProjectRefreshAction<CR>

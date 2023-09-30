@@ -1,0 +1,97 @@
+Xcursor.theme: Qogir
+Xcursor.size: 16
+
+!#################
+!Urxvt settings
+! special
+URxvt.foreground: #DADAE8
+URxvt.background: #1E1E29
+URxvt.cursorColor: #B1E3AD
+
+! black
+URxvt.color0: #6E6C7E
+URxvt.color8: #6E6C7E
+
+! red
+URxvt.color1: #E38C8F
+URxvt.color9: #E38C8F
+
+! green
+URxvt.color2: #B1E3AD
+URxvt.color10: #B1E3AD
+
+! yellow
+URxvt.color3: #EBDDAA
+URxvt.color11: #EBDDAA
+
+! blue
+URxvt.color4: #A4B9EF
+URxvt.color12: #A4B9EF
+
+! magenta
+URxvt.color5: #C6AAE8
+URxvt.color13: #C6AAE8
+
+! cyan
+URxvt.color6: #E5B4E2
+URxvt.color14: #E5B4E2
+
+! white
+URxvt.color7: #DADAE8
+
+!! URxvt Appearance
+/* URxvt.font: xft:JetBrainsMono Nerd Font:size=13 */
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 24
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 4098
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.iso14755: false
+
+! Perl extension
+URxvt.perl-ext-common:  default,matcher,selection-to-clipboard,...
+
+! Enable clicking on URLs
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+URxvt.clipboard.autocopy: true
+! Copy and paste
+URxvt.keysym.C-S-c: perl:clipboard:copy
+URxvt.keysym.C-S-v: perl:clipboard:paste
+
+! Font style
+URxvt.font: xft:Iosevka Nerd Font Mono:size=13
+
+! Allow rezising font keybind
+URxvt.keysym.C-minus:  resize-font:smaller
+URxvt.keysym.C-plus:    resize-font:bigger
+
+! avoid printing screen when pressed PrintScreen
+URxvt.print-pipe: "cat > /dev/null"
+
+!#################
+! Xterm settings
+*.termName: xterm-256color
+*.vt100.locale: false
+*.vt100.utf8: true
+*.vt100.metaSendsEscape: true
+*.vt100.backarrowKey: false
+*.ttyModes: erase ^?
+*.vt100.saveLines: 4096
+*.vt100.geometry: 80x32
+*.vt100.selectToClipboard: true
+*.vt100.faceName: Iosevka:size=13:antialias=true
+*.vt100.renderFont: true
+*.vt100.scaleHeight: 1.2
+*.vt100.translations: #override \n\
+<Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
+Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
+Ctrl Alt <Key>S: secure()
