@@ -1,23 +1,23 @@
 #+TITLE: Junio Dotfiles
 
 ** structure
-- scripts/ :: binaries that make life easier
-- config/  :: where main configuration files are stored
-- notes/   :: a glob of personal notes, articles and ideas
-- docs/    :: books, documents, articles from multiple sources
-- media/   :: pictures, videos, music, etc.
-- fonts/   :: in case someones asks for it
-- private/ :: i can't say it, it's a secret
+- =scripts/= :: binaries that make life easier
+- =config/=  :: where main configuration files are stored
+- =notes/=   :: a glob of personal notes, articles and ideas
+- =docs/=    :: books, documents, articles from multiple sources
+- =media/=   :: pictures, videos, music, etc.
+- =fonts/=   :: in case someones asks for it
+- =private/= :: i can't say it, it's a secret
 
 ** FAQ
 *** What should I put on =private=?
 I recommend to use the same folder structure as the main directory, and use it for private stuff like passwords, ssh keys, etc. and use it on 
 _quick example_:
-- ssh/ :: your .ssh keys (make sure it's encrypted)
-- gpg/ :: your .gpg keys (make sure it's encrypted)
-- notes/ :: Journal, intrusive thoughts, this kind of thing. (depending on what is inside, make sure it's also encrypted)
-- media/  :: Definetly not pirated movies, music, etc.
-- |_ books/ :: books
+- =ssh/= :: your .ssh keys (make sure it's encrypted)
+- =gpg/= :: your .gpg keys (make sure it's encrypted)
+- =notes/= :: Journal, intrusive thoughts, this kind of thing. (depending on what is inside, make sure it's also encrypted)
+- =media/=  :: Definetly not pirated movies, music, etc.
+- =|_ books/= :: books
 
 *** Why name =config= instead of =XDG_CONFIG=?
 Isn't always that I'll be using X11, and also the _xdg\__ part would mess with the naming convention (all lowercase, no symbols)
