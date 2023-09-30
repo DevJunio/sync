@@ -1,0 +1,122 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = true
+command_timeout = 5000
+scan_timeout = 5000
+palette = 'foo'
+format = """
+[╭─┤](bold lav)\ 
+$username$hostname $directory\ 
+$git_branch$git_status$git_state$git_metrics
+[╰──╼](bold lav)$jobs$character
+"""
+right_format = """
+$aws$c$cmake$docker_context$golang$kubernetes$lua$nix_shell$nodejs$ruby$rust$zig\
+$package$cmd_duration$memory_usage$time
+"""
+continuation_prompt = "[>>](bold lav)"
+
+[sudo]
+format = '[〚[as $symbol]〛](lav)'
+
+[character]
+#"format = "[  >](green) "
+success_symbol = "[ I  >](bold green) "
+error_symbol = "[ I  >](bold red) "
+vimcmd_symbol = "[ N  < ](bold yellow)"
+vimcmd_replace_one_symbol = "[ R  < ](bold purple)"
+vimcmd_replace_symbol = "[ R  < ](bold purple)"
+vimcmd_visual_symbol = "[ V  < ](bold blue)"
+
+[username]
+format = '[  ]($style) '
+show_always = true
+
+[directory]
+truncation_length=3
+truncate_to_repo=true
+home_symbol = '~'
+fish_style_pwd_dir_length=3
+truncation_symbol = ''
+[directory.substitutions]
+'~/projects/' = 'www/'
+'~/.dotfiles/' = '.d/'
+'~/.config/' = '.c/'
+
+[package]
+disabled = false
+format = '[<](lav)[$symbol$version]($style)[>](lav)'
+
+[cmd_duration]
+format = ' [took $duration]($style)'
+
+[jobs]
+symbol = "✦"
+symbol_threshold = 1
+number_threshold = 2
+
+[time]
+format = '[〚](lav)[$time]($style)[〛](lav)'
+
+[hostname]
+format='@ [$ssh_symbol$hostname]($style)'
+
+## Git
+[git_branch]
+format = '[git:](lav)[$branch $symbol]($style)'
+# format = '[·](bold lav)[git:](lav)[$branch $symbol]($style)'
+
+[git_status]
+format = '[\(](lav)[$all_status$ahead_behind]($style)[\)](lav)'
+ignore_submodules = true
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+[git_metrics]
+added_style = 'bold blue'
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+## Colors
+[palettes.foo]
+lav = '#8A83B8'
+
+## Languages
+[aws]
+format = '[〚 [$symbol($profile)(\($region\))( ($duration)]($style)〛](lav)'
+
+[c]
+format = '[〚 [$symbol($version(-$name))]($style) 〛](lav)'
+
+[cmake]
+format = '[〚 [$symbol($version)]($style) 〛](lav)'
+
+[docker_context]
+format = '[〚 [$symbol$context]($style) 〛](lav)'
+
+[golang]
+format = '[〚 [$symbol($version)]($style) 〛](lav)'
+
+# [java]
+# format = '[〚 [$symbol($version)]($style) 〛](lav)'
+
+[kubernetes]
+format = '[〚 [$symbol$context( \($namespace\))]($style) 〛](lav)'
+
+[lua]
+format = '[〚 [ ($version)](bold blue) 〛](lav)'
+
+[nix_shell]
+format = '[〚 [$symbol$state( \($name\))]($style) 〛](lav)'
+
+[nodejs]
+format = '[〚 [${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) 〛](lav)'
+
+[ruby]
+format = '[〚 [$symbol($version)]($style) 〛](lav)'
+
+[rust]
+format = '[〚](lav) [$symbol($version)]($style) [〛](lav)'
+
+[zig]
+format = '[〚 [$symbol($version)]($style) 〛](lav)'
